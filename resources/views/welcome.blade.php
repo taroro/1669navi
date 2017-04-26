@@ -13,6 +13,13 @@
         <!-- Styles -->
         <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css">
         <style type="text/css">
+            body{   background-repeat: no-repeat;
+                    background: rgb(185,210,224); /* Old browsers */
+                    background: -moz-radial-gradient(center, ellipse cover,  rgba(185,210,224,1) 0%, rgba(187,214,228,1) 0%, rgba(186,211,225,1) 15%, rgba(186,211,225,1) 38%, rgba(169,199,215,1) 68%, rgba(169,199,215,1) 68%, rgba(169,199,215,1) 82%, rgba(158,191,208,1) 100%); /* FF3.6-15 */
+                    background: -webkit-radial-gradient(center, ellipse cover,  rgba(185,210,224,1) 0%,rgba(187,214,228,1) 0%,rgba(186,211,225,1) 15%,rgba(186,211,225,1) 38%,rgba(169,199,215,1) 68%,rgba(169,199,215,1) 68%,rgba(169,199,215,1) 82%,rgba(158,191,208,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: radial-gradient(ellipse at center,  rgba(185,210,224,1) 0%,rgba(187,214,228,1) 0%,rgba(186,211,225,1) 15%,rgba(186,211,225,1) 38%,rgba(169,199,215,1) 68%,rgba(169,199,215,1) 68%,rgba(169,199,215,1) 82%,rgba(158,191,208,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9d2e0', endColorstr='#9ebfd0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                }
             .testimonial-group > .row {
                 overflow-x: auto;
                 white-space: nowrap;
@@ -21,6 +28,7 @@
                 display: inline-block;
                 float: none;
             }
+            .google-map{border:3px solid #F4F4F4;}
         </style>
     </head>
     <body>
@@ -37,7 +45,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">หน้าแรก <span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="/">หน้าแรก <span class="sr-only">(current)</span></a></li>
                         <li><a href="#">เหตุด่วน/อุบัติเหตุ</a></li>
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
@@ -117,7 +125,7 @@
                     </div>
                     <div class="col-md-3" style="padding-left: 25px;">
                         <div class="row clearfix">
-                            <a href="#" class="btn btn-danger btn-lg"><i class="fa fa-plus-square" aria-hidden="true"></i> เพิ่มเหตุด่วน/อุบัติเหตุ</a>
+                            <a href="addAccident" class="btn btn-danger btn-lg"><i class="fa fa-plus-square" aria-hidden="true"></i> เพิ่มเหตุด่วน/อุบัติเหตุ</a>
                         </div>
                         <div class="row clearfix">
                             <div class="pre-scrollable" style="max-height:calc(100vh - 156px);">
@@ -165,17 +173,20 @@
             </div>
         </div>
         <!-- Scripts -->
+        <div class="google-map">
         <script>
             function initMap() {
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 17,
                     center: {lat: -33.8666, lng: 151.1958}
+
                 });
             }
         </script>
         <script async defer
             src="https://maps.googleapis.com/maps/api/js?v=3.27&key=AIzaSyDZyk86qgTBUA39xLpKqGQ5lX7IpyqdSH0&signed_in=true&callback=initMap">
         </script>
+        </div>
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     </body>

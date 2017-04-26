@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('login', 'LoginNaviController@calllogin');
+Route::get('register', 'RegisterNaviController@callregister');
+Route::get('addAccident', 'MainPageNaviController@calladdAccident');
