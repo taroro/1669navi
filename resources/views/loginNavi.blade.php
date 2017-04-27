@@ -204,7 +204,7 @@ hr{
         <h2 class='login_title text-center'>Login</h2>
         <hr>
 
-            <form class="form-signin">
+            <form class="form-signin" method="get" action="/">
                 <span id="reauth-ID" class="reauth-ID"></span>
                 <p class="input_title">User ID</p>
                 <input type="text" id="inputID" class="login_box" required autofocus>

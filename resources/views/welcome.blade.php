@@ -64,7 +64,7 @@
                                 <li class="divider"></li>
                                 <li><a href="#">Separated link</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
+                                <li><a href="login">Log out</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -178,7 +178,7 @@
             function initMap() {
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 17,
-                    center: {lat: -33.8666, lng: 151.1958}
+                    center: {lat: 16.54531, lng: 104.72351}
 
                 });
             }
